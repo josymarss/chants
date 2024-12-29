@@ -11,11 +11,13 @@
 		3C1707862D21D1F100974BE6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1707852D21D1F100974BE6 /* SceneDelegate.swift */; };
 		3C1707882D21D1F100974BE6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1707872D21D1F100974BE6 /* ViewController.swift */; };
 		3C17078B2D21D1F100974BE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C1707892D21D1F100974BE6 /* Main.storyboard */; };
-		3C17078D2D21D1F500974BE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C17078C2D21D1F500974BE6 /* Assets.xcassets */; };
 		3C1707902D21D1F500974BE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C17078E2D21D1F500974BE6 /* LaunchScreen.storyboard */; };
 		3C17079B2D21D1F600974BE6 /* Football_ChantsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C17079A2D21D1F600974BE6 /* Football_ChantsTests.swift */; };
 		3C1707A52D21D1F600974BE6 /* Football_ChantsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1707A42D21D1F600974BE6 /* Football_ChantsUITests.swift */; };
 		3C1707A72D21D1F600974BE6 /* Football_ChantsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1707A62D21D1F600974BE6 /* Football_ChantsUITestsLaunchTests.swift */; };
+		3C1707B42D21D27E00974BE6 /* Resources in Resources */ = {isa = PBXBuildFile; fileRef = 3C1707B32D21D27E00974BE6 /* Resources */; };
+		3C1707B62D21D2C200974BE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C1707B52D21D2C200974BE6 /* Assets.xcassets */; };
+		3C1707B92D21DD5200974BE6 /* ChantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1707B82D21DD5200974BE6 /* ChantsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +43,6 @@
 		3C1707852D21D1F100974BE6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3C1707872D21D1F100974BE6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3C17078A2D21D1F100974BE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3C17078C2D21D1F500974BE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C17078F2D21D1F500974BE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C1707912D21D1F500974BE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C1707962D21D1F600974BE6 /* Football ChantsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Football ChantsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +50,9 @@
 		3C1707A02D21D1F600974BE6 /* Football ChantsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Football ChantsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C1707A42D21D1F600974BE6 /* Football_ChantsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Football_ChantsUITests.swift; sourceTree = "<group>"; };
 		3C1707A62D21D1F600974BE6 /* Football_ChantsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Football_ChantsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3C1707B32D21D27E00974BE6 /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
+		3C1707B52D21D2C200974BE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3C1707B82D21DD5200974BE6 /* ChantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChantsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +103,14 @@
 		3C1707822D21D1F100974BE6 /* Football Chants */ = {
 			isa = PBXGroup;
 			children = (
+				3C1707B72D21DD3200974BE6 /* ViewControllers */,
+				3C1707B32D21D27E00974BE6 /* Resources */,
 				3C1707832D21D1F100974BE6 /* AppDelegate.swift */,
 				3C1707852D21D1F100974BE6 /* SceneDelegate.swift */,
 				3C1707872D21D1F100974BE6 /* ViewController.swift */,
 				3C1707892D21D1F100974BE6 /* Main.storyboard */,
-				3C17078C2D21D1F500974BE6 /* Assets.xcassets */,
 				3C17078E2D21D1F500974BE6 /* LaunchScreen.storyboard */,
+				3C1707B52D21D2C200974BE6 /* Assets.xcassets */,
 				3C1707912D21D1F500974BE6 /* Info.plist */,
 			);
 			path = "Football Chants";
@@ -125,6 +131,14 @@
 				3C1707A62D21D1F600974BE6 /* Football_ChantsUITestsLaunchTests.swift */,
 			);
 			path = "Football ChantsUITests";
+			sourceTree = "<group>";
+		};
+		3C1707B72D21DD3200974BE6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3C1707B82D21DD5200974BE6 /* ChantsViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,8 +245,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C1707B42D21D27E00974BE6 /* Resources in Resources */,
 				3C1707902D21D1F500974BE6 /* LaunchScreen.storyboard in Resources */,
-				3C17078D2D21D1F500974BE6 /* Assets.xcassets in Resources */,
+				3C1707B62D21D2C200974BE6 /* Assets.xcassets in Resources */,
 				3C17078B2D21D1F100974BE6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C1707882D21D1F100974BE6 /* ViewController.swift in Sources */,
+				3C1707B92D21DD5200974BE6 /* ChantsViewController.swift in Sources */,
 				3C1707842D21D1F100974BE6 /* AppDelegate.swift in Sources */,
 				3C1707862D21D1F100974BE6 /* SceneDelegate.swift in Sources */,
 			);
