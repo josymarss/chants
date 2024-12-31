@@ -8,7 +8,9 @@
 import UIKit
 
 class ChantsViewController: UIViewController {
-
+    private lazy var vm = TeamsViewModel()
+    private lazy var audioManager = AudioManagerViewModel()
+    
     private lazy var tableView: UITableView = {
         let tv = UITableView()
         tv.translatesAutoresizingMaskIntoConstraints = false
@@ -16,7 +18,8 @@ class ChantsViewController: UIViewController {
         tv.estimatedRowHeight = 44
         tv.backgroundColor = .clear
         tv.separatorStyle = .none
-        tv.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tv.register(UITableViewCell.self, forCellReuseIdentifier: "celli")
+        tv.register(TeamTableViewCell.self, forCellReuseIdentifier: TeamTableViewCell.cellId)
         return tv
     }()
     
@@ -28,7 +31,8 @@ class ChantsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .systemBlue
+        self.view.backgroundColor = .white
+        
         // Do any additional setup after loading the view.
     }
     
@@ -37,6 +41,8 @@ class ChantsViewController: UIViewController {
 
 private extension ChantsViewController {
     func setUp() {
+        self.navigationController?.navigationBar.topItem?.title = "Fooball Chants"
+        self.navigationController?.navigationBar.prefersLargeTitles = true
         
         tableView.dataSource = self
         self.view.addSubview(tableView)
@@ -54,23 +60,24 @@ extension ChantsViewController: UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        3
+//        vm.teams.count
+        vm.teams.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let team = vm.teams[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: TeamTableViewCell.cellId, for: indexPath) as! TeamTableViewCell
         
-        switch indexPath.row {
-            case 0 :
-                cell.backgroundColor = .systemRed
-            case 1:
-                cell.backgroundColor = .systemCyan
-            case 3:
-                cell.backgroundColor = .systemPink
-            default :
-                break
-        }
+        cell.configure(with: team, delegate: self)
         
         return cell
+    }
+}
+
+extension ChantsViewController: TeamTableViewCellProtocol {
+    func didTapPlay(team: Team) {
+        audioManager.playback(team)
+        vm.playBackToggle(team: team)
+        tableView.reloadData()
     }
 }
