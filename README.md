@@ -12,3 +12,5 @@ The goal of this project is to solidify my understanding of:
 - Multimedia handling using AVAudioPlayer.
 - Swift features like computed properties.
 - UI customization including icons, colors, and app navigation.
+
+### Original project by @tundsdev
